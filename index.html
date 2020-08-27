@@ -13,9 +13,50 @@
     
     <!-- font awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <title>Transport</title>
+
+    <style>
+      /* Center the loader */
+      
+      
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Add animation to "page content" */
+      .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+      }
+      
+      @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+      }
+      
+      @keyframes animatebottom { 
+        from{ bottom:-100px; opacity:0 } 
+        to{ bottom:0; opacity:1 }
+      }
+      
+      section{
+        display: none;
+      }
+      </style>
+
   </head>
   <body id="home">
+    <div id="loader"></div>
       <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"> <img src="images/logo.png" alt="logo"> </a>
@@ -195,9 +236,15 @@
         <div class="container text-center">
           <p>Other Softwares By Us</p>
           <div class="other-apps-icons">
-            <a href="https://www.ebusinesflow.com" target="_blank"><img src="images/other-apps/ebusinessflow-PS.png" alt=""></a>
-            <a href="https://www.myreminda.com" target="_blank"><img src="images/other-apps/My-Reminda-PS.png" alt=""></a>
-            <a href="https://www.officepro247.com" target="_blank"><img src="images/other-apps/Office-Pro-PS.png" alt=""></a>
+            <a href="https://www.officepro247.com" target="_blank"><img src="images/other-apps/customer-logo-1.png" alt=""></a>
+            <a href="https://www.emblicgroup.com/payroll" target="_blank"><img src="images/other-apps/customer-logo-2.png" alt=""></a>
+            <a href="https://www.ebusinesflow.com" target="_blank"><img src="images/other-apps/customer-logo-4.png" alt=""></a>
+            <a href="https://www.ebusinesflow.com" target="_blank"><img src="images/other-apps/customer-logo-5.png" alt=""></a>
+            <a href="https://www.ebusinesflow.com" target="_blank"><img src="images/other-apps/customer-logo-6.png" alt=""></a>
+            <a href="#" target="_blank"><img src="images/other-apps/customer-logo-7.png" alt=""></a>
+            <a href="#" target="_blank"><img src="images/other-apps/customer-logo-8.png" alt=""></a>
+            <a href="https://www.emblichost.com" target="_blank"><img src="images/other-apps/customer-logo-9.png" alt=""></a>
+            <a href="https://www.estudylite.com" target="_blank"><img src="images/other-apps/customer-logo-10.png" alt=""></a>
           </div>
         </div>
       </section>
@@ -243,6 +290,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="js/smooth-scroll.js"></script>
     <script>
+      $(document).ready(function(){
+        $("#loader").css("display", "none");
+        $("section").css("display","block");
+      })
       var scroll = new SmoothScroll('a[href*="#"]');
       let date = new Date();
       document.querySelector("#date__tab").innerHTML =
