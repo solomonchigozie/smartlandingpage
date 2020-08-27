@@ -172,7 +172,16 @@ body{
             display: inline-block;
             font-size: 12px;
         }
+         
     }
+       
+}
+.action__btn{
+    box-shadow: none;
+    padding: 8px 25px;
+    border:none;
+    border-radius:20px !important;
+    background-image: linear-gradient(to right, $topcolor1, $topcolor2);
 }
 
 #other-apps{

@@ -152,6 +152,14 @@ body {
   font-size: 12px;
 }
 
+.action__btn {
+  box-shadow: none;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 20px !important;
+  background-image: linear-gradient(to right, #300709, #1c0405);
+}
+
 #other-apps {
   background: #f8f9fa;
   padding: 100px 0;
